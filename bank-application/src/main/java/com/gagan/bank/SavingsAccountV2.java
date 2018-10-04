@@ -2,6 +2,7 @@ package com.gagan.bank;
 
 public class SavingsAccountV2 extends SavingsAccount implements Insurance {
 	
+	
 	@Override
 	public String getInsuranceName() {
 		// TODO Auto-generated method stub
@@ -19,5 +20,8 @@ public class SavingsAccountV2 extends SavingsAccount implements Insurance {
 		// TODO Auto-generated method stub
 		return "03-10-2018";
 	}
+
+	
+	
 
 }

@@ -8,7 +8,7 @@ package com.gagan.bank;
  *
  */
 
-public abstract class BankAccount {
+public class BankAccount implements Comparable<BankAccount>{
 	int accountNo;
 	String accountHolderName;
 	double accountBalance;
@@ -30,7 +30,7 @@ public abstract class BankAccount {
 		this.accountBalance = accountBalance;
 	}
 
-	public abstract void withdraw(double amount);
+	//public abstract void withdraw(double amount);
 
 	public void deposit(double amount) {
 		accountBalance += amount;
@@ -56,6 +56,12 @@ public abstract class BankAccount {
 	public String toString() {
 		return "BankAccount [accountNo=" + accountNo + ", accountHolderName=" + accountHolderName + ", accountBalance="
 				+ accountBalance + "]";
+	}
+
+	@Override
+	public int compareTo(BankAccount acc) {
+		// TODO Auto-generated method stub
+		return acc.getAccountNo() / getAccountNo();
 	}
 
 }

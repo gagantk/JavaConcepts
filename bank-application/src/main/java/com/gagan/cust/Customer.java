@@ -1,5 +1,6 @@
 package com.gagan.cust;
 
+import com.gagan.arraylist.BankAccountList;
 import com.gagan.bank.BankAccount;
 import com.gagan.bank.CurrentAccountV2;
 import com.gagan.bank.SavingsAccount;
@@ -30,7 +31,7 @@ public class Customer {
 		System.out.println("Savings Account Balance: " + savingsAccount.getAccountBalance());
 		System.out.println("Current Account Balance: " + currentAccount.getAccountBalance());*/
 		
-		BankAccount acc = null;
+		/*BankAccount acc = null;
 		acc = new SavingsAccount();
 		acc.withdraw(6000);
 		System.out.println(acc);
@@ -45,7 +46,33 @@ public class Customer {
 		System.out.println("\nCurrent Account Insurance Details:");
 		System.out.println(insCur.getInsuranceName());
 		System.out.println(insCur.getInsuranceAmount());
-		System.out.println(insCur.getInsuranceDate());
+		System.out.println(insCur.getInsuranceDate());*/
+		
+		BankAccountList list = new BankAccountList();
+		
+		list.addBankAccount(new SavingsAccount("Susheel", 6000));
+		list.addBankAccount(new SavingsAccount("Daya", 7000));
+		list.addBankAccount(new SavingsAccount("Gagan", 8000));
+		list.addBankAccount(new SavingsAccount("Akshatha", 9000));
+		list.addBankAccount(new SavingsAccount("Sowmya", 10000));
+		
+		for(BankAccount account:list.getBankAccountList()) {
+			System.out.println(account);
+		}
+		
+		System.out.println(list.getBankAccountById(3));
+		
+		System.out.println("\n");
+		for(BankAccount account:list.updateBankAccount(3, "Gagan T K")) {
+			System.out.println(account);
+		}
+		
+		list.removeAccountById(3);
+		
+		
+		
+		
+		
 	}
 
 }
