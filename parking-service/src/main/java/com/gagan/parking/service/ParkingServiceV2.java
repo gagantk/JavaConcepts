@@ -24,7 +24,7 @@ public static Map<Integer, Customer> parkingMap = new HashMap<>();
 		int sectionCount=(temp%100)/10;
 		int floorCount=temp/100;
 		int parkingId=(carCount%10)%10;
-		return "Floor No. "+floorCount+"Section No"+sectionCount+"Compartment"+parkingId;
+		return "Floor No.: "+floorCount+", Section No.: "+sectionCount+", Compartment: "+parkingId;
 		
 	}
 
@@ -66,6 +66,7 @@ public static Map<Integer, Customer> parkingMap = new HashMap<>();
 			System.out.println(entry.getValue().getCustomerName());
 			System.out.println(entry.getValue().getPhoneNo());
 			System.out.println(entry.getValue().getParkingTime());
+			System.out.println("===========================================");
 		}
 		
 		parkingMap.remove(110);
@@ -76,7 +77,7 @@ public static Map<Integer, Customer> parkingMap = new HashMap<>();
 			System.out.println(entry.getValue().getCustomerName());
 			System.out.println(entry.getValue().getPhoneNo());
 			System.out.println(entry.getValue().getParkingTime());
-			
+			System.out.println("===========================================");
 		}
 		
 	}

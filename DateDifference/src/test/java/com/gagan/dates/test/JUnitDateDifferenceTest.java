@@ -1,4 +1,4 @@
-package com.gagan.dates.test;
+/*package com.gagan.dates.test;
 
 import static org.junit.Assert.assertEquals;
 
@@ -115,3 +115,4 @@ public class JUnitDateDifferenceTest {
 	}
 
 }
+*/

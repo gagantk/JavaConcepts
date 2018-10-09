@@ -72,10 +72,6 @@ public class DateDifferenceProvider {
 		for(int month = startDate.getMm(); month < 12; month++) {
 			days += DAYS_IN_MONTH[month];
 		}
-		/*if(isFebruary(startDate) && isLeapYear(startDate.getYyyy())) {
-			System.out.println(startDate.getYyyy() + "true");
-			days++;
-		}*/
 		return days;
 	}
 	
@@ -87,9 +83,7 @@ public class DateDifferenceProvider {
 			if(isLeapYear(year))
 				days++;
 		}
-		//for(int year = startDate.getYyyy(); year < endDate.getYyyy(); year++) {
-			days += 365 * years;
-		//}
+		days += 365 * years;
 		if(isLeapYear(startDate.getYyyy())) {
 			days++;
 		}
@@ -129,47 +123,3 @@ public class DateDifferenceProvider {
 		return false;
 	}
 }
-		
-		
-		/*int diffDate, diffMonth;
-		int monthDays[] = new int[]{31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-		diffDate = endDate.getDd() - startDate.getDd();
-		diffMonth = endDate.getMm() - startDate.getMm();
-		boolean isLeapStartYear = isLeapYear(startDate.getYyyy());
-		boolean isLeapEndYear = isLeapYear(endDate.getYyyy());
-		if(diffMonth == 1) {
-			diffDate += getDaysOfMonth(startDate.getMm());
-		}
-		for(int i = 0; i < startDate.getMm() - 1; i++) {
-			diffDate += monthDays[i];
-		}
-		
-		return diffDate;
-	}
-	
-	public static int getDaysOfMonth(int mm) {
-		int days = 0;
-		if(mm == 1 || mm == 3 || mm == 5 || mm == 7 || mm == 8 || mm == 10 || mm == 12) {
-			days = 31;
-		}
-		else if(mm == 4 || mm == 6 || mm == 9 || mm == 11) {
-			days = 30;
-				
-		}
-		return days;
-	}
-	
-	public static boolean isLeapYear(int year) {
-		  if (year % 4 != 0) {
-		    return false;
-		  } else if (year % 400 == 0) {
-		    return true;
-		  } else if (year % 100 == 0) {
-		    return false;
-		  } else {
-		    return true;
-		  }
-		}
-
-}
-*/
