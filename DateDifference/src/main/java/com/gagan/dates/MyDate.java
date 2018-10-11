@@ -2,7 +2,7 @@ package com.gagan.dates;
 
 public class MyDate {
 
-	private int dd, mm, yyyy;
+	private final int dd, mm, yyyy;
 
 	public int getDd() {
 		return dd;

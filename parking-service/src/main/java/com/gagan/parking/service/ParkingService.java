@@ -1,4 +1,4 @@
-package com.gagan.parking.service;
+/*package com.gagan.parking.service;
 
 import java.util.TreeMap;
 import java.util.Map;
@@ -7,7 +7,7 @@ import com.gagan.parking.model.Customer;
 
 public class ParkingService {
 	
-	/*Map<String, Customer> carParkingCompartment;
+	Map<String, Customer> carParkingCompartment;
 	List<Map<String, Customer>> carParkingSection;
 	List<List<Map<String, Customer>>> carParkingFloor;
 	List<List<List<Map<String, Customer>>>> carParkingBuilding;
@@ -18,7 +18,7 @@ public class ParkingService {
 		carParkingSection = new ArrayList<Map<String, Customer>>();
 		carParkingFloor = new ArrayList<List<Map<String, Customer>>>();
 		carParkingBuilding = new ArrayList<List<List<Map<String, Customer>>>>();
-	}*/
+	}
 	int carSpace=1;
 	int secSpace = 10;
 	int secCount = 1;
@@ -38,13 +38,13 @@ public class ParkingService {
 		carParkingBuilding = new TreeMap<>();
 	}
 	
-	/*public void addCar(Customer cust) {
+	public void addCar(Customer cust) {
 		carParkingCompartment.put("1111"+ i, cust);
 		carParkingSection.add(carParkingCompartment.get("1111"+i));
 		carParkingFloor.add(carParkingSection);
 		carParkingBuilding.add(carParkingFloor);
 		i++;
-	}*/
+	}
 	
 	public void addCar(Customer cust) {
 		carSpace=++autoSpaceGenerate;
@@ -57,9 +57,9 @@ public class ParkingService {
 		if(carSpace==11) {
 			//carSpace=1;
 			carSpace=++autoSpaceGenerate;}
-		/*if(secCount>parkingFloor) {
+		if(secCount>parkingFloor) {
 		parkingFloor++;
-		}*/
+		}
 		carParkingCompartment.put(carSpace, cust);
 		carParkingSection.put(secCount, carParkingCompartment);
 		carParkingFloor.put(parkingFloor, carParkingSection);
@@ -87,7 +87,7 @@ public static void main(String[] args) {
 	
 	
 	
-	/*for(Customer cust:parking.getCompartmentList().values()) {
+	for(Customer cust:parking.getCompartmentList().values()) {
 		System.out.println(cust);
 	}
 	System.out.println("***********************************");
@@ -111,7 +111,7 @@ public static void main(String[] args) {
 	System.out.println("***********************************");
 	for(Map<Integer, Map<Integer, Customer>> cust: parking.getFloorList().values()) {
 		System.out.println(cust);
-	}*/
+	}
 	System.out.println("===================================");
 	parking.addCar(new Customer("Gagan", 215454351, "08:36"));
 	parking.addCar(new Customer("Susheel", 3154564, "09:28"));
@@ -141,3 +141,4 @@ public static void main(String[] args) {
 	
 }
 }
+*/

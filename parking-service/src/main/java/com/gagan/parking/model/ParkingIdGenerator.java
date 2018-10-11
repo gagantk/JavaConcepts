@@ -1,4 +1,4 @@
-package com.gagan.parking.model;
+/*package com.gagan.parking.model;
 
 public class ParkingIdGenerator {
 	
@@ -9,3 +9,4 @@ public class ParkingIdGenerator {
 	
 
 }
+*/

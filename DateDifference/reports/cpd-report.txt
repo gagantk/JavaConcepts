@@ -1,0 +1,12 @@
+Found a 4 line (26 tokens) duplication in the following files: 
+Starting at line 24 of C:\Users\gagatk\Documents\R&D\DateDifference\src\main\java\com\gagan\test\DateDifferenceTest.java
+Starting at line 27 of C:\Users\gagatk\Documents\R&D\DateDifference\src\main\java\com\gagan\test\DateDifferenceTest.java
+Starting at line 30 of C:\Users\gagatk\Documents\R&D\DateDifference\src\main\java\com\gagan\test\DateDifferenceTest.java
+Starting at line 33 of C:\Users\gagatk\Documents\R&D\DateDifference\src\main\java\com\gagan\test\DateDifferenceTest.java
+Starting at line 36 of C:\Users\gagatk\Documents\R&D\DateDifference\src\main\java\com\gagan\test\DateDifferenceTest.java
+Starting at line 39 of C:\Users\gagatk\Documents\R&D\DateDifference\src\main\java\com\gagan\test\DateDifferenceTest.java
+
+		testData.add(new MyDateTestRecord(new MyDate(06, 04, 2011), new MyDate(18, 06, 2011), 73));
+
+		// case5
+		testData.add(new MyDateTestRecord(new MyDate(06, 04, 2011), new MyDate(18, 12, 2011), 256));
